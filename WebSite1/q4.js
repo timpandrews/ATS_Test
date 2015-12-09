@@ -12,21 +12,26 @@ function jsonTable() {
     var container = document.getElementById("tableContainer");
     //add code here to build a table in the container
 
-    var html = "<table id='dataTable'>"
+    var html = "<table><thead>"
 
+    //Build header html
     html += "<tr>"
     for (var i = 0; i < data.headers.length; i++) {
         html += "<th>" + data.headers[i] + "</th>"
     }
-    html += "</tr>"
+    html += "</tr></thead>"
 
+    //Build row html
+    html += "<tbody>"
     for (var i = 0; i < data.rows.length; i++) {
-        alert(i)
+        html += "<tr>"
+        for (var j = 0; j < data.rows[i].length; j++) {
+            html += "<td>" + data.rows[i][j] + "</td>"
+        }
+        html +="</tr>"
     }
 
-    html += "</table>"
-
-    alert(html)
+    html += "</tbody></table>"
 
     container.innerHTML = html
 

@@ -1,8 +1,29 @@
-﻿body {
+﻿#tableContainer {
+    margin:0px;
+    padding:0px;
+    border:1px solid #001933;
 }
 
-.q4 { 
-    color:red;
-    font-weight: bold;
-    font-size: 48px;
+#tableContainer table {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
 }
+#tableContainer th {
+    background-color: #003f7f;
+    color: #cce5ff;
+}
+
+#tableContainer td {
+    padding-left: 2px;
+}
+
+#tableContainer tr:nth-child(odd) {
+    background-color: #99ccff;
+}
+
+#tableContainer tr:nth-child(even) {
+    background-color: #e5f2ff
+}
+
