@@ -1,12 +1,35 @@
-﻿function init() {
+﻿
+function jsonTable() {
+    
+    var data = {
+        headers: ["First Name", "Last Name", "Age"],
+        rows: [
+            ["John", "Doe", 30],
+            ["Jane", "Doe", 27],
+            ["Mac", "Smith", 52]
+        ]
+    };
+    var container = document.getElementById("tableContainer");
+    //add code here to build a table in the container
 
-    alert("q4.js")
+    var html = "<table id='dataTable'>"
 
-    var results = "q4"
+    html += "<tr>"
+    for (var i = 0; i < data.headers.length; i++) {
+        html += "<th>" + data.headers[i] + "</th>"
+    }
+    html += "</tr>"
 
-    var div = document.getElementById('q4');
+    for (var i = 0; i < data.rows.length; i++) {
+        alert(i)
+    }
 
-    div.innerHTML = div.innerHTML + results;
+    html += "</table>"
+
+    alert(html)
+
+    container.innerHTML = html
 
 }
+
 
