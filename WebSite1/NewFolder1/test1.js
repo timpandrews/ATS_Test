@@ -2,7 +2,7 @@
 
 function init() {
 
-    //alert("hello")
+    alert("hello")
     var i = 1;
     var maxIterations = 22; //******** Set to 100 when done ********
 
